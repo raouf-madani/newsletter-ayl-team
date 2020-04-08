@@ -31,7 +31,7 @@ app.post('/',function(req,res){
      }]
  };
  const jsonData = JSON.stringify(data);
- const url = 'https://us4.api.mailchimp.com/3.0/lists/3b534eb9f7a';
+ const url = 'https://us4.api.mailchimp.com/3.0/lists/3b534eb9f7';
  const options = {
      method:'POST',
      auth:'Raouf_Madani:1dbd83c495814ce59f917fa061007306-us4'
@@ -43,7 +43,7 @@ app.post('/',function(req,res){
         res.sendFile(__dirname+'/success.html');
     }else{
         res.sendFile(__dirname+'/failure.html');
-        console.log(response.statusMessage);
+        console.log(response.statusCode);
     };
 
     response.on("data",function(data){
